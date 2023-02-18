@@ -1,0 +1,9 @@
+
+
+SELECT first_name, last_name FROM customer WHERE first_name='Jamie' AND last_name = 'Rice'; 
+SELECT first_name, last_name FROM customer WHERE first_name IN ('Ann','Anne','Annie');
+SELECT first_name, last_name FROM customer WHERE first_name LIKE 'Ann%';
+
+SELECT first_name, last_name FROM customer WHERE first_name  LIKE 'A%' AND LENGTH(first_name) BETWEEN 3 AND 5 ORDER BY LENGTH(first_name) ;
+SELECT first_name ||' '|| last_name FROM customer WHERE first_name LIKE 'Bra%' AND last_name <> 'Motley' ORDER BY LENGTH(first_name);
+
