@@ -1,0 +1,16 @@
+
+# install & connect db server
+https://www.postgresqltutorial.com/postgresql-getting-started/connect-to-postgresql-database/
+https://www.postgresqltutorial.com/postgresql-getting-started/load-postgresql-sample-database/
+
+SELECT first_name ||' '||last_name AS "full name", email FROM customer; 
+SELECT first_name ||' '||last_name "full name", email FROM customer; 
+SELECT first_name||' '|| last_name FROM customer ORDER BY last_name DESC, first_name ASC;
+SELECT first_name ||' '|| last_name, LENGTH(last_name) AS len FROM customer ORDER BY len DESC;
+SELECT first_name ||' '|| last_name AS len FROM customer ORDER BY LENGTH(first_name) DESC;
+
+# NULLS FIRST or NULLS LAST after the ORDER BY clause if there is NULL
+
+SELECT DISTINCT bcolor, fcolor FROM distinct_demo ORDER BY bcolor, fcolor NULLS LAST;
+SELECT DISTINCT ON (bcolor) bcolor, fcolor FROM distinct_demo ORDER BY bcolor, fcolor NULLS LAST;
+
